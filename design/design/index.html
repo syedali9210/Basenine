@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Develop clear, customer focused messaging — Design Card</title>
+  <link rel="stylesheet" href="design.css" />
+</head>
+<body>
+  <main class="scene">
+    <div class="card" id="design-card">
+      <div class="card-title">Develop clear, customer<br>focused messaging</div>
+
+      <div class="animation-container">
+        <!-- SVG viewbox matching Frame 2095586716 (285w x 304h) -->
+        <svg id="wavy-svg" viewBox="0 0 285 304" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- High-fidelity SVG Glow Filters tailored to the Burgundy theme -->
+            <filter id="glow-burgundy" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="2.5" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            
+            <filter id="glow-bright" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="4" result="blur1" />
+              <feGaussianBlur stdDeviation="1.2" result="blur2" />
+              <feMerge>
+                <feMergeNode in="blur1" />
+                <feMergeNode in="blur2" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+
+            <!-- Premium Gradient for Wavy Paths -->
+            <linearGradient id="burgundy-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8c133f" />
+              <stop offset="50%" stop-color="#b81d56" />
+              <stop offset="100%" stop-color="#540224" />
+            </linearGradient>
+          </defs>
+          
+          <!-- All elements will be projected in 3D and rendered dynamically via JS -->
+          <g id="guides-group"></g>
+          <g id="paths-group"></g>
+          <g id="dots-group"></g>
+        </svg>
+      </div>
+
+      <div class="card-footer">
+        <div class="footer-left">Design</div>
+        <div class="footer-right">
+          <span>Clean,</span>
+          <span>ship smart,</span>
+          <span>convert faster.</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="design.js"></script>
+</body>
+</html>

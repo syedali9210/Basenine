@@ -1,0 +1,10 @@
+.vercel
+.DS_Store
+.gemini
+.codex
+.cursor
+.vscode
+.zed
+__MACOSX
+.mcp.json
+node_modules

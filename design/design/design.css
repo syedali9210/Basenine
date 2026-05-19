@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: url('../fonts/Satoshi-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeistMono';
+  src: url('../fonts/GeistMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeistPixelSquare';
+  src: url('../fonts/GeistPixel-Square.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ── Reset ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #191218;
+  --card-pink: #ff719a;
+  --burgundy: #540224;
+  --line-burgundy: #8c133f;
+  --glow-pink: #ff9ebd;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scene {
+  width: min(431px, 92vw);
+  height: min(669px, 96vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* Card Styling */
+.card {
+  background-color: var(--card-pink);
+  width: 346px;
+  height: 533px;
+  border-radius: 11px;
+  padding: 24px 24px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: grab;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card-title {
+  font-family: 'GeistMono', 'Satoshi', monospace;
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--burgundy);
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  z-index: 2;
+  user-select: none;
+  pointer-events: none;
+}
+
+.animation-container {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  z-index: 1;
+  user-select: none;
+}
+
+#wavy-svg {
+  width: 285px;
+  height: 304px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* 3D Wave Path Styling */
+.wavy-path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.guide-path {
+  stroke: var(--line-burgundy);
+  stroke-width: 0.8px;
+  opacity: 0.15;
+}
+
+.active-path {
+  stroke: url(#burgundy-grad);
+  stroke-width: 1.5px;
+  opacity: 0.9;
+  filter: url(#glow-burgundy);
+}
+
+
+
+.marker-dot {
+  fill: var(--burgundy);
+  filter: url(#glow-burgundy);
+  opacity: 0.95;
+}
+
+
+
+/* Footer layout matches Figma exact constraints */
+.card-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 2;
+  margin-top: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+.footer-left {
+  font-family: 'GeistPixelSquare', monospace;
+  font-size: 52px;
+  color: var(--burgundy);
+  line-height: 0.8;
+  letter-spacing: -1px;
+  user-select: none;
+}
+
+.footer-right {
+  font-family: 'GeistMono', 'Satoshi', monospace;
+  font-size: 13.5px;
+  color: var(--burgundy);
+  line-height: 1.35;
+  text-align: right;
+  letter-spacing: -0.2px;
+}
+
+.footer-right span {
+  display: block;
+}

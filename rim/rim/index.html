@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Positioning Your Needs — Basenine</title>
+  <link rel="stylesheet" href="globe.css" />
+</head>
+
+<body>
+  <main class="scene">
+    <div class="card">
+      <div class="card-title">Develop clear, customer<br>focused messaging</div>
+
+      <div class="globe-container">
+        <svg id="globe" viewBox="-10 110 451 451" xmlns="http://www.w3.org/2000/svg">
+
+          <!--
+            LAYER ORDER (SVG paints bottom → top):
+            1. Callout group  — box bg is lowest, rims draw over it (no gap/cut effect)
+            2. Outer circle
+            3. Spinning rings — always on top of the callout box background
+            4. Dots           — topmost so they're always sharp
+          -->
+
+          <!-- 1 ── Callout group: triangle + line + box (rides ring-0 via JS) -->
+          <g id="callout-group">
+            <polygon id="triangle-marker" points="0,0" fill="#757575" opacity="0.88" />
+            <line id="callout-line" x1="0" y1="0" x2="0" y2="0" stroke="#757575" stroke-width="0.9" opacity="0.80" />
+            <foreignObject id="callout-fo" x="0" y="0" width="165" height="28">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="callout-box">
+                POSITIONING YOUR NEEDS
+              </div>
+            </foreignObject>
+          </g>
+
+          <!-- 2 ── Outer globe circle — static boundary -->
+          <path id="outer-circle" fill="none" stroke="currentColor" opacity="1.00" />
+
+          <!-- 3 ── Spinning meridian rings — True 3D Paths -->
+          <g id="meridian-wide">
+            <path class="ring-back" fill="none" stroke="currentColor" opacity="0.42" />
+            <path class="ring-front" fill="none" stroke="currentColor" opacity="0.72" />
+          </g>
+
+          <g id="meridian-narrow">
+            <path class="ring-back" fill="none" stroke="currentColor" opacity="0.38" />
+            <path class="ring-front" fill="none" stroke="currentColor" opacity="0.58" />
+          </g>
+
+          <g id="meridian-slice">
+            <path class="ring-back" fill="none" stroke="currentColor" opacity="0.32" />
+            <path class="ring-front" fill="none" stroke="currentColor" opacity="0.48" />
+          </g>
+
+          <!-- 4 ── Dot markers — JS moves these with their rim -->
+          <rect id="dot-tr" x="342" y="328" width="7" height="7" fill="#d4788a" opacity="0.85" />
+          <rect id="dot-lm" x="47" y="351" width="7" height="7" fill="#d4788a" opacity="0.85" />
+          <rect id="dot-bc" x="195" y="490" width="7" height="7" fill="#d4788a" opacity="0.85" />
+          <rect id="dot-ur" x="323" y="165" width="7" height="7" fill="#d4788a" opacity="0.85" />
+
+        </svg>
+      </div>
+
+      <div class="card-footer">
+        <span class="percent" id="percent-loader">0%</span>
+        <span class="footer-text">
+          <span>of our</span>
+          <span>clients need this</span>
+        </span>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>

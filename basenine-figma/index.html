@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basenine</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <main class="page">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#" aria-label="Basenine home">
+        <img src="./assets/logo-basenine.png" alt="Basenine" />
+      </a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#faqs">FAQs</a>
+      </div>
+      <a class="nav-cta" href="#intro">Book an Intro Call</a>
+    </nav>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">(for B2B Tech Companies ONLY)</p>
+      <h1 id="hero-title">
+        Turning <span>websites</span> into your product's best salesperson
+      </h1>
+      <p class="subhead">
+        Messaging that doesn't confuse visitors, beautiful design that converts
+        and a scalable website your marketing team owns.
+      </p>
+      <a class="hero-cta" href="#intro">
+        <span class="pixel-mark" aria-hidden="true">
+          <i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i>
+        </span>
+        <span>Book an intro call</span>
+      </a>
+    </section>
+
+    <section class="showcase" aria-label="Selected website work">
+      <div class="slider" aria-hidden="true">
+        <div class="slider-track">
+          <article class="project-card project-card-text project-card-teal">
+            <div>
+              <p>Full-service design for growth-stage teams</p>
+              <h3>Sharper positioning, faster conversion paths.</h3>
+            </div>
+          </article>
+          <article class="project-card project-card-image">
+            <img src="./assets/hero-site.png" alt="" />
+            <p>Full-service design for Shikenso</p>
+          </article>
+          <article class="project-card project-card-light">
+            <div class="print-piece">
+              <span>Basenine</span>
+              <strong>Launch system for B2B demand teams.</strong>
+            </div>
+          </article>
+          <article class="project-card project-card-text project-card-black">
+            <div>
+              <p>Website strategy and build</p>
+              <h3>Messaging systems that scale beyond launch.</h3>
+            </div>
+          </article>
+          <article class="project-card project-card-cream">
+            <div class="browser-mock">
+              <span></span><span></span><span></span>
+              <strong>Product story</strong>
+            </div>
+          </article>
+          <article class="project-card project-card-text project-card-teal">
+            <div>
+              <p>Full-service design for growth-stage teams</p>
+              <h3>Sharper positioning, faster conversion paths.</h3>
+            </div>
+          </article>
+          <article class="project-card project-card-image">
+            <img src="./assets/hero-site.png" alt="" />
+            <p>Full-service design for Shikenso</p>
+          </article>
+          <article class="project-card project-card-light">
+            <div class="print-piece">
+              <span>Basenine</span>
+              <strong>Launch system for B2B demand teams.</strong>
+            </div>
+          </article>
+          <article class="project-card project-card-text project-card-black">
+            <div>
+              <p>Website strategy and build</p>
+              <h3>Messaging systems that scale beyond launch.</h3>
+            </div>
+          </article>
+          <article class="project-card project-card-cream">
+            <div class="browser-mock">
+              <span></span><span></span><span></span>
+              <strong>Product story</strong>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="trusted" aria-labelledby="trusted-title">
+      <h2 id="trusted-title">
+        Trusted By Marketing Teams In 20+ B2B Tech Companies
+      </h2>
+      <div class="logo-grid" aria-label="Trusted company logos">
+        <div class="logo-item image-logo">
+          <img src="./assets/logos/component-1.svg" alt="Supermove" />
+        </div>
+        <div class="logo-item image-logo">
+          <img src="./assets/logos/flytbase-black.svg" alt="FlytBase" />
+        </div>
+        <div class="logo-item image-logo">
+          <img src="./assets/logos/frame-1.svg" alt="FEDS" />
+        </div>
+        <div class="logo-item image-logo image-logo-icg">
+          <img src="./assets/logos/group-1.svg" alt="Shikenso" />
+        </div>
+        <div class="logo-item image-logo">
+          <img src="./assets/logos/group-1948754640.svg" alt="Watchit" />
+        </div>
+        <div class="logo-item image-logo">
+          <img src="./assets/logos/image-1272.svg" alt="Client logo" />
+        </div>
+        <div class="logo-item image-logo">
+          <img src="./assets/logos/mask-group.svg" alt="Kodex" />
+        </div>
+        <div class="logo-item image-logo">
+          <img src="./assets/logos/myicon-2.svg" alt="Simply Labs" />
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-section cards-stack" data-node-id="3178:8162" data-stacking-cards-init
+      data-stacking-cards-desktop="true" data-stacking-cards-tablet="true" data-stacking-cards-mobile="true"
+      data-stacking-cards-desktop-x="-18.375em, 0em, 18.875em" data-stacking-cards-desktop-y="2.125em, 0em, 2.75em"
+      data-stacking-cards-desktop-rotate="-7.67, 2.52, 7.25" data-stacking-cards-tablet-x="-7em, 0em, 7em"
+      data-stacking-cards-tablet-y="1.5em, 0em, 2em" data-stacking-cards-tablet-rotate="-6, 2.5, 5.5"
+      data-stacking-cards-mobile-x="0em, 0em, 0em" data-stacking-cards-mobile-y="0em, 0em, 0em"
+      data-stacking-cards-mobile-rotate="-4, 2, 4" aria-labelledby="problem-title">
+      <div class="problem-container">
+        <h2 id="problem-title" class="problem-heading">
+          You have a great product but your website is not getting you paying customers.
+        </h2>
+        <div class="cards-stack__collection">
+          <div data-stacking-card-stack class="cards-stack__list">
+            <div data-slot-parent data-stacking-card class="cards-stack__item">
+              <article data-stacking-card-target class="problem-card problem-card-pink">
+                <span class="problem-card-number">1.</span>
+                <p>
+                  Your competitive advantage remains hidden behind ineffective website messaging.
+                </p>
+              </article>
+            </div>
+            <div data-slot-parent data-stacking-card class="cards-stack__item">
+              <article data-stacking-card-target class="problem-card problem-card-green">
+                <span class="problem-card-number">2.</span>
+                <p>
+                  Your website's poor design is hurting your brand image and your bottom line.
+                </p>
+              </article>
+            </div>
+            <div data-slot-parent data-stacking-card class="cards-stack__item">
+              <article data-stacking-card-target class="problem-card problem-card-black">
+                <span class="problem-card-number">3.</span>
+                <p>
+                  Your rigid, slow "2013" site repels visitors and handcuffs your marketing team.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="client-work" data-node-id="3190:2610" aria-labelledby="client-work-title">
+      <div class="client-work-container">
+        <h2 id="client-work-title" class="client-work-heading" data-node-id="3190:2611">
+          Selected Client Work
+        </h2>
+        <div class="client-work-grid">
+          <article class="client-work-card" data-client-work-card data-client-work-side="left"
+            data-cursor-marquee-text="Case Study">
+            <div class="client-work-image" data-node-id="3190:2622">
+              <img src="./assets/client-kodex-global.png" alt="Kodex Global website design preview" />
+            </div>
+            <h3 data-node-id="3190:2612">Kodex Global</h3>
+            <p data-node-id="3190:2642">
+              Legal-tech platform trusted by 15,000+ government agencies; backed by a16z with clients like OpenAI,
+              Coinbase, and AT&amp;T.e.
+            </p>
+          </article>
+
+          <article class="client-work-card" data-client-work-card data-client-work-side="right"
+            data-cursor-marquee-text="Case Study">
+            <div class="client-work-image" data-node-id="3190:2624">
+              <img src="./assets/client-uniqkey-feds.png" alt="Uniqkey website design preview" />
+            </div>
+            <h3 data-node-id="3190:2614">Uniqkey</h3>
+            <p data-node-id="3190:2644">
+              Nordic passwordless security startup with €5M raised, giving enterprises seamless and secure login
+              control.
+            </p>
+          </article>
+
+          <article class="client-work-card" data-client-work-card data-client-work-side="left"
+            data-cursor-marquee-text="Case Study">
+            <div class="client-work-image" data-node-id="3190:2623">
+              <img src="./assets/client-supermove.png" alt="Supermove website design preview" />
+            </div>
+            <h3 data-node-id="3190:2613">Supermove</h3>
+            <p data-node-id="3190:2643">
+              Moving-tech SaaS scaling U.S. logistics operations, backed by $18M from a16z.
+            </p>
+          </article>
+
+          <article class="client-work-card" data-client-work-card data-client-work-side="right"
+            data-cursor-marquee-text="Case Study">
+            <div class="client-work-image" data-node-id="3190:2625">
+              <img src="./assets/client-uniqkey-feds.png" alt="FEDS Group website design preview" />
+            </div>
+            <h3 data-node-id="3190:2615">FEDS Group</h3>
+            <p data-node-id="3190:2645">
+              Largest drone solutions provider in the MENA region, delivering enterprise-grade drone services, products,
+              and training for government bodies and critical industries.
+            </p>
+          </article>
+        </div>
+        <div class="client-work-cta-wrap">
+          <a class="client-work-cta" href="#" data-node-id="3215:8170">
+            <span class="pixel-mark" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+            </span>
+            <span>Read More Case Studies</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-stack-section" aria-label="Basenine process">
+      <article class="process-intro-card" data-node-id="3215:8166">
+        <h2 class="process-intro-card__heading" data-node-id="3215:8168">
+          Work with founding marketers &amp; designers with 7+ years experience crafting websites that outsell your top
+          rep
+        </h2>
+        <p class="process-intro-card__note" data-node-id="3215:8169">
+          ( So, how do we work? )
+        </p>
+      </article>
+
+      <div class="stacking-cards__collection">
+        <div class="stacking-cards__list">
+          <article data-stacking-cards-item class="stacking-cards__item process-card process-card-positioning"
+            data-node-id="3216:2650" data-name="Background">
+            <div class="process-card__content" data-node-id="3216:2651">
+              <div class="process-card__number" data-node-id="3216:2652">1</div>
+              <div class="process-card__copy" data-node-id="3216:2655">
+                <h2 data-node-id="3216:2656">Develop clear, customer focused messaging</h2>
+                <p>
+                  Basenine conducts in-depth messaging sessions to define your product's place in the market. We analyze
+                  your audience and competition and craft clear messaging and conversion driven website copy.
+                </p>
+              </div>
+              <div class="process-card__bottom">
+                <h3 class="process-card__keyword" data-node-id="3216:2660">Positioning</h3>
+                <a class="process-card__link" href="#" aria-label="Learn more about positioning"
+                  data-node-id="3216:2661">
+                  <span>Learn more</span>
+                  <img src="./assets/process-arrow.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="process-card__media" data-node-id="3216:2667">
+              <div class="process-card__poster rim-card-wrapper" data-stacking-cards-img data-node-id="3216:2668">
+                <div class="rim-card-title">Develop clear, customer<br>focused messaging</div>
+                <div class="globe-container">
+                  <svg id="globe" viewBox="-10 110 451 451" xmlns="http://www.w3.org/2000/svg">
+                    <g id="callout-group">
+                      <polygon id="triangle-marker" points="0,0" fill="#757575" opacity="0.88" />
+                      <line id="callout-line" x1="0" y1="0" x2="0" y2="0" stroke="#757575" stroke-width="0.9"
+                        opacity="0.80" />
+                      <foreignObject id="callout-fo" x="0" y="0" width="165" height="28">
+                        <div xmlns="http://www.w3.org/1999/xhtml" class="callout-box">
+                          POSITIONING YOUR NEEDS
+                        </div>
+                      </foreignObject>
+                    </g>
+                    <path id="outer-circle" fill="none" stroke="currentColor" opacity="1.00" />
+                    <g id="meridian-wide">
+                      <path class="ring-back" fill="none" stroke="currentColor" opacity="0.42" />
+                      <path class="ring-front" fill="none" stroke="currentColor" opacity="0.72" />
+                    </g>
+                    <g id="meridian-narrow">
+                      <path class="ring-back" fill="none" stroke="currentColor" opacity="0.38" />
+                      <path class="ring-front" fill="none" stroke="currentColor" opacity="0.58" />
+                    </g>
+                    <g id="meridian-slice">
+                      <path class="ring-back" fill="none" stroke="currentColor" opacity="0.32" />
+                      <path class="ring-front" fill="none" stroke="currentColor" opacity="0.48" />
+                    </g>
+                    <rect id="dot-tr" x="342" y="328" width="7" height="7" fill="#d4788a" opacity="0.85" />
+                    <rect id="dot-lm" x="47" y="351" width="7" height="7" fill="#d4788a" opacity="0.85" />
+                    <rect id="dot-bc" x="195" y="490" width="7" height="7" fill="#d4788a" opacity="0.85" />
+                    <rect id="dot-ur" x="323" y="165" width="7" height="7" fill="#d4788a" opacity="0.85" />
+                  </svg>
+                </div>
+                <div class="card-footer">
+                  <span class="percent" id="percent-loader">0%</span>
+                  <span class="footer-text">
+                    <span>of our</span>
+                    <span>clients need this</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-stacking-cards-item
+            class="stacking-cards__item process-card process-card-design process-card-light" data-node-id="3089:3155"
+            data-name="Background">
+            <div class="process-card__content" data-node-id="3089:3156">
+              <div class="process-card__number" data-node-id="3089:3157">2</div>
+              <div class="process-card__copy" data-node-id="3089:3160">
+                <h2 data-node-id="3089:3161">Crafting beautiful designs that convert</h2>
+                <p>
+                  We reimagine the look and feel of your website, create compelling product visuals that explain your
+                  features best. Our design focusses on driving more conversions, engaging with visitors, reducing
+                  bounce rate.
+                </p>
+              </div>
+              <div class="process-card__bottom">
+                <h3 class="process-card__keyword" data-node-id="3089:3165">Design</h3>
+                <a class="process-card__link" href="#" aria-label="Learn more about design" data-node-id="3089:3166">
+                  <span>Learn more</span>
+                  <img src="./assets/process-arrow.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="process-card__media" data-node-id="3089:3172">
+              <div class="process-card__poster design-card" data-stacking-cards-img data-node-id="3089:3173">
+                <div class="design-card-title">Crafting beautiful designs<br>that convert</div>
+                <div class="design-animation-container">
+                  <!-- SVG viewbox matching Frame 2095586716 (285w x 304h) -->
+                  <svg id="design-wavy-svg" viewBox="0 0 285 304" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <!-- High-fidelity SVG Glow Filters tailored to the Burgundy theme -->
+                      <filter id="design-glow-burgundy" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="2.5" result="blur" />
+                        <feMerge>
+                          <feMergeNode in="blur" />
+                          <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                      </filter>
+                      
+                      <filter id="design-glow-bright" x="-80%" y="-80%" width="260%" height="260%">
+                        <feGaussianBlur stdDeviation="4" result="blur1" />
+                        <feGaussianBlur stdDeviation="1.2" result="blur2" />
+                        <feMerge>
+                          <feMergeNode in="blur1" />
+                          <feMergeNode in="blur2" />
+                          <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                      </filter>
+
+                      <!-- Premium Gradient for Wavy Paths -->
+                      <linearGradient id="design-burgundy-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#8c133f" />
+                        <stop offset="50%" stop-color="#b81d56" />
+                        <stop offset="100%" stop-color="#540224" />
+                      </linearGradient>
+                    </defs>
+                    
+                    <!-- All elements will be projected in 3D and rendered dynamically via JS -->
+                    <g id="design-guides-group"></g>
+                    <g id="design-paths-group"></g>
+                    <g id="design-dots-group"></g>
+                  </svg>
+                </div>
+
+                <div class="design-card-footer">
+                  <div class="design-footer-left">Design</div>
+                  <div class="design-footer-right">
+                    <span>Clean,</span>
+                    <span>ship smart,</span>
+                    <span>convert faster.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article data-stacking-cards-item
+            class="stacking-cards__item process-card process-card-development process-card-light"
+            data-node-id="3089:3131" data-name="Background">
+            <div class="process-card__content" data-node-id="3089:3132">
+              <div class="process-card__number" data-node-id="3089:3133">3</div>
+              <div class="process-card__copy" data-node-id="3089:3136">
+                <h2 data-node-id="3089:3137">Building a scalable website your marketing team owns</h2>
+                <p>
+                  We help build fast, secure websites that are easy to manage and scale. Updating website content,
+                  creating new blogs and webinars is a breeze, helping marketing teams to move faster and run more
+                  campaigns.
+                </p>
+                <div class="process-card__logos" aria-label="Development platforms">
+                  <img src="./assets/process-logo-next.png" alt="Next.js" />
+                  <img src="./assets/process-logo-webflow.png" alt="Webflow" />
+                  <img src="./assets/process-logo-framer.png" alt="Framer" />
+                </div>
+              </div>
+              <div class="process-card__bottom">
+                <h3 class="process-card__keyword" data-node-id="3089:3141">Development</h3>
+                <a class="process-card__link" href="#" aria-label="Learn more about development"
+                  data-node-id="3089:3142">
+                  <span>Learn more</span>
+                  <img src="./assets/process-arrow.svg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="process-card__media" data-node-id="3089:3148">
+              <div class="process-card__poster cube-card" data-stacking-cards-img data-node-id="3089:3149">
+                <div class="cube-card-title">Building things that<br>can be scaled anytime</div>
+                <div class="cube-globe-container">
+                  <div id="cube-container"></div>
+                </div>
+                <div class="cube-card-footer">
+                  <span class="cube-percent" id="build-text">Build</span>
+                  <span class="cube-footer-text">fast,<br>ship fast , move faster</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="founder-section" data-node-id="3219:2635" aria-labelledby="founder-title">
+      <div class="founder-inner">
+        <div data-trail-area class="founder-hero rotating-image-trail">
+          <h2 id="founder-title" class="founder-title" data-node-id="3219:2636">
+            Hello, I’m Basil
+          </h2>
+          <div data-trail-collection class="rotating-image-trail__collection">
+            <div class="rotating-image-trail__list">
+              <div data-trail-item class="rotating-image-trail__item">
+                <div class="rotating-image-trail__card">
+                  <img src="./assets/founder-trail-1.png" loading="eager" alt=""
+                    class="rotating-image-trail__card-img" />
+                </div>
+              </div>
+              <div data-trail-item class="rotating-image-trail__item">
+                <div class="rotating-image-trail__card">
+                  <img src="./assets/founder-trail-2.png" loading="eager" alt=""
+                    class="rotating-image-trail__card-img" />
+                </div>
+              </div>
+              <div data-trail-item class="rotating-image-trail__item">
+                <div class="rotating-image-trail__card">
+                  <img src="./assets/founder-trail-3.png" loading="eager" alt=""
+                    class="rotating-image-trail__card-img" />
+                </div>
+              </div>
+              <div data-trail-item class="rotating-image-trail__item">
+                <div class="rotating-image-trail__card">
+                  <img src="./assets/founder-trail-4.png" loading="eager" alt=""
+                    class="rotating-image-trail__card-img" />
+                </div>
+              </div>
+              <div data-trail-item class="rotating-image-trail__item">
+                <div class="rotating-image-trail__card">
+                  <img src="./assets/founder-trail-5.png" loading="eager" alt=""
+                    class="rotating-image-trail__card-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="founder-copy" data-node-id="3219:2643" data-highlight-text data-highlight-scroll-start="top 62%"
+          data-highlight-scroll-end="bottom 72%" data-highlight-fade="0.22" data-highlight-stagger="0.018">
+          <p>
+            After helping drive 60% YoY growth at a Silicon Valley deep tech startup, I started Basenine to help
+            founders fix the same problem I saw everywhere: great product, weak website.
+          </p>
+          <p>
+            After building 54 websites and counting, I’ve seen what works: strategy, messaging, design, and build that
+            work together.
+          </p>
+          <p>
+            So you get a site that’s clear, credible, and built to convert - minus the big-agency overhead.
+          </p>
+        </div>
+
+        <a class="founder-cta" href="#" data-node-id="3219:2644">
+          <span class="pixel-mark pixel-mark-pink" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i>
+          </span>
+          <span>Connect on LinkedIn</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section_testimonial">
+      <div class="testimonial-padding">
+        <div class="testimonial-container">
+          <div class="testimonial34_component">
+            <div class="testimonial-heading-wrap">
+              <h2 class="testimonial-heading">Unfiltered praise <br />(no blackmail required)</h2>
+            </div>
+
+            <div class="testimonial34_tabs w-tabs" data-testimonial-tabs>
+              <div class="testimonial34_tabs-menu w-tab-menu" role="tablist" aria-label="Testimonials">
+                <button class="testimonial34_tab-link w-inline-block w-tab-link w--current" type="button" role="tab"
+                  aria-selected="true" aria-controls="testimonial-tab-1" data-w-tab="Tab 1">
+                  <img loading="lazy" src="./assets/testimonials/Mask-group.svg" alt="Kodex Global"
+                    class="testimonial34_tab-logo" />
+                </button>
+                <button class="testimonial34_tab-link w-inline-block w-tab-link" type="button" role="tab"
+                  aria-selected="false" aria-controls="testimonial-tab-2" data-w-tab="Tab 2">
+                  <img loading="lazy" src="./assets/testimonials/Frame-9.svg" alt="FEDS"
+                    class="testimonial34_tab-logo" />
+                </button>
+                <button class="testimonial34_tab-link w-inline-block w-tab-link" type="button" role="tab"
+                  aria-selected="false" aria-controls="testimonial-tab-4" data-w-tab="Tab 4">
+                  <img loading="lazy" src="./assets/testimonials/myIcon-1.svg" alt="Simply Labs"
+                    class="testimonial34_tab-logo" />
+                </button>
+                <button class="testimonial34_tab-link w-inline-block w-tab-link" type="button" role="tab"
+                  aria-selected="false" aria-controls="testimonial-tab-3" data-w-tab="Tab 3">
+                  <img loading="lazy" src="./assets/testimonials/supermove-1.svg" alt="Supermove"
+                    class="testimonial34_tab-logo" />
+                </button>
+                <button class="testimonial34_tab-link w-inline-block w-tab-link" type="button" role="tab"
+                  aria-selected="false" aria-controls="testimonial-tab-7" data-w-tab="Tab 7">
+                  <img loading="lazy" src="./assets/testimonials/image-1287.svg" alt="Maya Melamed"
+                    class="testimonial34_tab-logo dark" />
+                </button>
+                <button class="testimonial34_tab-link tabs-last w-inline-block w-tab-link" type="button" role="tab"
+                  aria-selected="false" aria-controls="testimonial-tab-5" data-w-tab="Tab 5">
+                  <img loading="lazy" src="./assets/testimonials/Uniqkey_black-1.svg" alt="Uniqkey"
+                    class="testimonial34_tab-logo" />
+                </button>
+              </div>
+
+              <div class="testimonial34_tabs-content w-tab-content">
+                <div id="testimonial-tab-1" data-w-tab="Tab 1" class="testimonial34_tab-pane w-tab-pane w--tab-active"
+                  role="tabpanel">
+                  <div class="testimonial34_card">
+                    <div class="testimonial34_client-image-wrapper">
+                      <img loading="lazy" src="./assets/testimonials/Mask-group.svg" alt=""
+                        class="testimonial34_tab-content_logo" />
+                      <img loading="eager" src="./assets/testimonials/Rectangle-8147.svg" alt="Stacey Wang"
+                        class="testimonial34_client-image" />
+                    </div>
+                    <div class="testimonial34_content">
+                      <p class="testimonial34_text">As a Series A head of marketing, I needed speed, sharp positioning,
+                        and end-to-end execution without managing multiple agencies. Basil deeply understands product
+                        marketing and quickly turned our content into a compelling website.</p>
+                      <div class="testimonial34_client">
+                        <div class="testimonial34_client-info">
+                          <div class="text-weight-semibold">Stacey Wang</div>
+                          <div>Head of Marketing, Kodex Global</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="testimonial-tab-2" data-w-tab="Tab 2" class="testimonial34_tab-pane w-tab-pane" role="tabpanel"
+                  hidden>
+                  <div class="testimonial34_card">
+                    <div class="testimonial34_client-image-wrapper">
+                      <img loading="lazy" src="./assets/testimonials/Frame-9.svg" alt=""
+                        class="testimonial34_tab-content_logo" />
+                      <img sizes="100vw"
+                        srcset="./assets/testimonials/image-1310-1-p-500.webp 500w, ./assets/testimonials/image-1310-1-p-800.webp 800w, ./assets/testimonials/image-1310-1-p-1080.webp 1080w, ./assets/testimonials/image-1310-1.webp 1320w"
+                        alt="Lubna Pathan" src="./assets/testimonials/image-1310-1.webp" loading="eager"
+                        class="testimonial34_client-image" />
+                    </div>
+                    <div class="testimonial34_content">
+                      <p class="testimonial34_text">Basil took a hands-on, highly strategic approach, helping us sharpen
+                        our messaging and clearly communicate the scale of FEDS' services to enterprise and government
+                        stakeholders. The new site is easier to manage, easier to understand, and led to noticeable MQL
+                        improvements within weeks.</p>
+                      <div class="testimonial34_client">
+                        <div class="testimonial34_client-info">
+                          <div class="text-weight-semibold">Lubna Pathan</div>
+                          <div>Marketing Manager, FEDS</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="testimonial-tab-4" data-w-tab="Tab 4" class="testimonial34_tab-pane w-tab-pane" role="tabpanel"
+                  hidden>
+                  <div class="testimonial34_card">
+                    <div class="testimonial34_client-image-wrapper">
+                      <img loading="lazy" src="./assets/testimonials/myIcon-1.svg" alt=""
+                        class="testimonial34_tab-content_logo" />
+                      <img sizes="100vw"
+                        srcset="./assets/testimonials/Mickey-Switzer-p-500.webp 500w, ./assets/testimonials/Mickey-Switzer.webp 587w"
+                        alt="Mickey Switzer" src="./assets/testimonials/Mickey-Switzer.webp" loading="lazy"
+                        class="testimonial34_client-image" />
+                    </div>
+                    <div class="testimonial34_content">
+                      <p class="testimonial34_text">I've worked with Basenine on multiple projects now, and it's rare to
+                        find someone this reliable. The team bridges design and Webflow flawlessly, catches the small
+                        details before you do, and makes the entire process faster, smoother, and simply better.</p>
+                      <div class="testimonial34_client">
+                        <div class="testimonial34_client-info">
+                          <div class="text-weight-semibold">Mickey Switzer</div>
+                          <div>Partner, Simply Labs</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="testimonial-tab-3" data-w-tab="Tab 3" class="testimonial34_tab-pane w-tab-pane" role="tabpanel"
+                  hidden>
+                  <div class="testimonial34_card">
+                    <div class="testimonial34_client-image-wrapper">
+                      <img loading="lazy" src="./assets/testimonials/supermove-1.svg" alt=""
+                        class="testimonial34_tab-content_logo" />
+                      <img sizes="100vw"
+                        srcset="./assets/testimonials/Arabi-Siva-p-500.webp 500w, ./assets/testimonials/Arabi-Siva.webp 587w"
+                        alt="Arabi Siva" src="./assets/testimonials/Arabi-Siva.webp" loading="lazy"
+                        class="testimonial34_client-image" />
+                    </div>
+                    <div class="testimonial34_content">
+                      <p class="testimonial34_text">Speed and quality rarely go together - but Basenine makes it look
+                        easy. Every page we ship feels creative, on-brand, and built with care. They're fast, proactive,
+                        and always pushing for better.</p>
+                      <div class="testimonial34_client">
+                        <div class="testimonial34_client-info">
+                          <div class="text-weight-semibold">Arabi Siva</div>
+                          <div>VP Marketing, Supermove</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="testimonial-tab-7" data-w-tab="Tab 7" class="testimonial34_tab-pane w-tab-pane" role="tabpanel"
+                  hidden>
+                  <div class="testimonial34_card">
+                    <div class="testimonial34_client-image-wrapper">
+                      <img loading="lazy" src="./assets/testimonials/image-1287.svg" alt=""
+                        class="testimonial34_tab-content_logo" />
+                      <img sizes="100vw"
+                        srcset="./assets/testimonials/Maya-Melamed-p-500.webp 500w, ./assets/testimonials/Maya-Melamed.webp 587w"
+                        alt="Maya Melamed" src="./assets/testimonials/Maya-Melamed.webp" loading="lazy"
+                        class="testimonial34_client-image" />
+                    </div>
+                    <div class="testimonial34_content">
+                      <p class="testimonial34_text">Basil made our product launch page come alive - built exactly to
+                        Figma, with animations that added real flair. He's fast, collaborative, and always upbeat.
+                        Working with him feels easy, and the result speaks for itself.</p>
+                      <div class="testimonial34_client">
+                        <div class="testimonial34_client-info">
+                          <div class="text-weight-semibold">Maya Melamed</div>
+                          <div>Fractional CMO</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="testimonial-tab-5" data-w-tab="Tab 5" class="testimonial34_tab-pane w-tab-pane" role="tabpanel"
+                  hidden>
+                  <div class="testimonial34_card">
+                    <div class="testimonial34_client-image-wrapper">
+                      <img loading="lazy" src="./assets/testimonials/Uniqkey_black-1.svg" alt=""
+                        class="testimonial34_tab-content_logo" />
+                      <img sizes="100vw"
+                        srcset="./assets/testimonials/Utsav-Chopra-p-500.webp 500w, ./assets/testimonials/Utsav-Chopra.webp 587w"
+                        alt="Utsav Chopra" src="./assets/testimonials/Utsav-Chopra.webp" loading="lazy"
+                        class="testimonial34_client-image" />
+                    </div>
+                    <div class="testimonial34_content">
+                      <p class="testimonial34_text">Basil helped us turn our website into a growth engine. He knows how
+                        to attract the right customers, improve conversions, and move fast without losing quality. If
+                        you're a startup looking for someone who just gets it - he's the one</p>
+                      <div class="testimonial34_client">
+                        <div class="testimonial34_client-info">
+                          <div class="text-weight-semibold">Utsav Chopra</div>
+                          <div>Head of Product Marketing</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faqs" class="faq-section" aria-labelledby="faq-heading">
+      <div class="faq-container">
+        <div class="faq-aside">
+          <h2 id="faq-heading" class="faq-heading">
+            Frequently Asked<br />
+            Questions
+          </h2>
+
+          <div class="faq-contact">
+            <div class="faq-contact__copy">
+              <h3>Still have questions?</h3>
+              <p>Book a call and let's talk.</p>
+            </div>
+
+            <a class="faq-contact__card" href="#intro">
+              <img src="./assets/faq/faq-call-avatar.png" alt="" class="faq-contact__avatar" loading="lazy" />
+              <span class="faq-contact__meta">
+                <span>Founder, CEO</span>
+                <strong>Basil Alosious</strong>
+              </span>
+              <span class="faq-contact__action">Book a Call -></span>
+            </a>
+
+            <a class="faq-contact__card" href="mailto:hello@basenine.com">
+              <img src="./assets/faq/faq-email-avatar.png" alt="" class="faq-contact__avatar" loading="lazy" />
+              <span class="faq-contact__meta">
+                <span>Send an Email</span>
+                <strong>hello@basenine.com</strong>
+              </span>
+              <span class="faq-contact__action">Send Email -></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="faq-list" data-faq-list>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1">
+              <span>Why should I choose Basenine for my project?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-answer-1" class="faq-answer" hidden>
+              <p>Basenine combines strategy, product marketing, design, and Webflow development so your site can move
+                from positioning to launch without handoffs between multiple teams.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2">
+              <span>What industries does Basenine specialize in?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-answer-2" class="faq-answer" hidden>
+              <p>Most projects are for B2B SaaS, AI, logistics, security, enterprise technology, and founder-led service
+                businesses that need clear positioning and a conversion-focused website.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3">
+              <span>How does Basenine's process differ from other agencies?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-answer-3" class="faq-answer" hidden>
+              <p>The process starts with messaging and structure before visuals, then moves into design, development,
+                animation, QA, and launch with one integrated workflow.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4">
+              <span>Do you exclusively use Webflow for projects?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-answer-4" class="faq-answer" hidden>
+              <p>Webflow is the most common build platform, but Basenine can also support Framer, custom front-end
+                builds, and handoff-ready design systems when the project needs it.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5">
+              <span>Can Basenine handle large-scale projects?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-answer-5" class="faq-answer" hidden>
+              <p>Yes. Larger sites are scoped around reusable sections, CMS structure, component systems, and clear
+                approval stages so the project can scale without becoming messy.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6">
+              <span>What kind of support can I expect after my project is completed?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-answer-6" class="faq-answer" hidden>
+              <p>Post-launch support can include fixes, CMS guidance, performance checks, new page builds, conversion
+                improvements, and ongoing design or Webflow updates.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-7">
+              <span>How quickly can Basenine deliver results?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-answer-7" class="faq-answer" hidden>
+              <p>Timelines depend on scope, but focused landing pages can move quickly, while full website projects
+                usually need more room for strategy, design, build, QA, and revisions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-8">
+              <span>Why hire a specialist website partner instead of a general agency?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-answer-8" class="faq-answer" hidden>
+              <p>A specialist partner can stay closer to the details that matter for a website: positioning, information
+                architecture, conversion flow, responsive design, animation, CMS setup, and launch polish.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-9">
+              <span>Is Basenine a good fit if I'm looking for a branding agency?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-answer-9" class="faq-answer" hidden>
+              <p>Basenine is a good fit when brand work needs to translate into a sharper website, stronger messaging,
+                and a launch-ready digital experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer-parallax class="footer-parallax-wrap">
+    <video class="footer-parallax-wrap__video" autoplay muted loop playsinline poster="assets/footer/clouds.jpg"
+      aria-hidden="true">
+      <source src="assets/footer/hills-moving-clouds.webm" type="video/webm" />
+    </video>
+    <footer id="intro" data-footer-parallax-inner class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand-row" data-footer-wordmark>
+          <div class="site-footer__brand-stack" aria-label="Basenine">
+            <span class="site-footer__brand-layer is-triangle" data-footer-wordmark-layer data-footer-wordmark-index="0"
+              aria-hidden="true">Basenine<span>©</span></span>
+            <span class="site-footer__brand-layer is-square" data-footer-wordmark-layer data-footer-wordmark-index="1"
+              aria-hidden="true">Basenine<span>©</span></span>
+            <span class="site-footer__brand-layer is-line" data-footer-wordmark-layer data-footer-wordmark-index="2"
+              aria-hidden="true">Basenine<span>©</span></span>
+            <span class="site-footer__brand-layer is-grid" data-footer-wordmark-layer data-footer-wordmark-index="3"
+              aria-hidden="true">Basenine<span>©</span></span>
+            <span class="site-footer__brand-layer is-circle" data-footer-wordmark-layer data-footer-wordmark-index="4"
+              aria-hidden="true">Basenine<span>©</span></span>
+          </div>
+          <label class="site-footer__mark" aria-label="Change Basenine wordmark style">
+            <span class="site-footer__mark-icon is-triangle" data-footer-font-icon data-footer-font-index="0"
+              aria-hidden="true"></span>
+            <span class="site-footer__mark-icon is-square" data-footer-font-icon data-footer-font-index="1"
+              aria-hidden="true"></span>
+            <span class="site-footer__mark-icon is-line" data-footer-font-icon data-footer-font-index="2"
+              aria-hidden="true"></span>
+            <span class="site-footer__mark-icon is-grid" data-footer-font-icon data-footer-font-index="3"
+              aria-hidden="true"></span>
+            <span class="site-footer__mark-icon is-circle" data-footer-font-icon data-footer-font-index="4"
+              aria-hidden="true"></span>
+            <input data-footer-font-slider class="site-footer__slider" type="range" min="0" max="4" step="0.001"
+              value="1" aria-label="Basenine wordmark style" />
+          </label>
+        </div>
+
+        <div class="site-footer__booking" aria-label="Book an intro call">
+          <!-- Cal inline embed code begins -->
+          <div id="my-cal-inline-intro" class="site-footer__cal" data-lenis-prevent></div>
+          <script type="text/javascript">
+            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+            Cal("init", "intro", { origin: "https://app.cal.com" });
+
+            Cal.ns.intro("inline", {
+              elementOrSelector: "#my-cal-inline-intro",
+              config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true", "theme": "dark" },
+              calLink: "basenine/intro",
+            });
+
+            Cal.ns.intro("ui", { "theme": "dark", "cssVarsPerTheme": { "light": { "cal-brand": "#0a0a0a" }, "dark": { "cal-brand": "#FFFEF4" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+          </script>
+          <!-- Cal inline embed code ends -->
+        </div>
+
+        <div class="site-footer__bottom">
+          <nav class="site-footer__links" aria-label="Footer navigation">
+            <a data-underline-link href="#">Privacy</a>
+            <a data-underline-link href="#">LinkedIn</a>
+            <a data-underline-link href="#">Instagram</a>
+            <a data-underline-link href="#">Threads</a>
+            <a data-underline-link href="#">Spotify</a>
+          </nav>
+          <p>Headquarters in Dubai, UAE. Basenine © 2026. USA · IND · UAE.</p>
+        </div>
+      </div>
+    </footer>
+    <div data-footer-parallax-dark class="footer-parallax-wrap__dark"></div>
+  </div>
+
+  <div data-cursor-marquee-status class="cursor-marquee" aria-hidden="true">
+    <div class="cursor-marquee__card">
+      <span data-cursor-marquee-text-target class="cursor-marquee__text-span">Case Study</span>
+      <span data-cursor-marquee-text-target class="cursor-marquee__text-span is--duplicate">
+        Case Study
+      </span>
+    </div>
+  </div>
+</body>
+
+</html>

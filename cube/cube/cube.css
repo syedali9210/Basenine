@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeistPixel';
+  src: url('../fonts/GeistPixel-Circle.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ── Reset ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #191218;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scene {
+  width: min(431px, 92vw);
+  height: min(669px, 96vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* Card Styling for Cube */
+.card {
+  background-color: #eaf6e6;
+  width: 346px;
+  height: 533px;
+  border-radius: 12px;
+  padding: 23px 23px 19px 23px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+}
+
+.card-title {
+  font-family: 'GeistPixel', monospace;
+  font-size: 24px;
+  color: #1a231a;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  z-index: 2;
+  letter-spacing: -0.5px;
+}
+
+.globe-container {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: -10px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.percent {
+  font-family: 'GeistPixel', monospace;
+  font-size: 64px;
+  color: #1a231a;
+  line-height: 1;
+  letter-spacing: -2px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.percent:hover {
+  text-shadow: 0 0 15px rgba(0, 99, 22, 0.2);
+}
+
+.footer-text {
+  font-family: 'Space Mono', 'Courier New', monospace;
+  font-size: 15px;
+  color: #1a231a;
+  line-height: 1.3;
+  padding-bottom: 8px;
+}
+
+#cube-container {
+  width: 100%;
+  height: 360px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cube-container svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.dashed-line {
+  /* stroke and width controlled by JS */
+}

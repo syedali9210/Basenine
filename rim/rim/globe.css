@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GeistPixel';
+  src: url('../fonts/GeistPixel-Circle.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ── Reset ────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #191218;
+  --rose: #d4788a;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scene {
+  width: min(431px, 92vw);
+  height: min(669px, 96vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+/* Card Styling */
+.card {
+  background-color: #FFACCA;
+  width: 346px;
+  height: 533px;
+  border-radius: 11px;
+  padding: 23px 23px 19px 23px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: default;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+}
+
+.card-title {
+  font-family: 'GeistPixel', monospace;
+  font-size: 24px;
+  color: #000000;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.globe-container {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  /* pull globe up slightly to match spacing */
+  margin-bottom: -10px;
+}
+
+#globe {
+  width: 301px;
+  height: 301px;
+  overflow: visible;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.percent {
+  font-family: 'GeistPixel', monospace;
+  font-size: 72px;
+  color: #000000;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.footer-text {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-text span {
+  display: block;
+}
+
+/* Clean solid look for the circular rims */
+#outer-circle,
+#meridian-wide path,
+#meridian-narrow path,
+#meridian-slice path {
+  stroke-width: 1px;
+  stroke: #7a72b0;
+  stroke-dasharray: none;
+  stroke-linecap: round;
+  shape-rendering: geometricPrecision;
+}
+
+/* Outer ring: gentle breath — JS does NOT touch this element */
+#outer-circle {
+  animation: breathe 5s ease-in-out infinite;
+}
+
+@keyframes breathe {
+
+  0%,
+  100% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.95;
+  }
+}
+
+/* Callout box styling */
+.callout-box {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+  color: #ffffff;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  padding: 0 10px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
