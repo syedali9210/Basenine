@@ -766,7 +766,38 @@ function debounceOnWidthChange(fn, ms) {
   };
 }
 
+function initCaseStudyNavbar() {
+  const toggle = document.querySelector("[data-case-study-nav-toggle]");
+  const menu = document.querySelector("[data-case-study-nav-menu]");
+  if (!toggle || !menu) return;
+
+  const closeMenu = () => {
+    toggle.setAttribute("aria-expanded", "false");
+    menu.classList.remove("is-open");
+  };
+
+  toggle.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    menu.classList.toggle("is-open", !isOpen);
+  });
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 760) closeMenu();
+    });
+  });
+
+  window.addEventListener(
+    "resize",
+    debounceOnWidthChange(() => {
+      if (window.innerWidth > 760) closeMenu();
+    }, 150),
+  );
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initCaseStudyNavbar();
   initLenisSmoothScroll();
   initStackingStickyCardsBounce();
   initClientWorkScrollCards();

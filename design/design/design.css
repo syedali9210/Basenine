@@ -69,7 +69,7 @@ body {
   width: 346px;
   height: 533px;
   border-radius: 11px;
-  padding: 24px 24px 20px 24px;
+  padding: 23px 23px 19px 23px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -175,4 +175,45 @@ body {
 
 .footer-right span {
   display: block;
+}
+
+@media (max-width: 430px) {
+  .scene {
+    height: min(620px, 90vh);
+    width: min(390px, 90vw);
+  }
+
+  .card {
+    height: 492px;
+    max-width: 320px;
+    padding: 21px 21px 17px 21px;
+    overflow: hidden;
+    width: 320px;
+  }
+
+  .card-title {
+    font-size: 19px;
+    line-height: 1.22;
+  }
+
+  .animation-container {
+    margin-bottom: -4px;
+    margin-top: -2px;
+    overflow: hidden;
+  }
+
+  #wavy-svg {
+    height: 268px;
+    overflow: hidden;
+    width: 250px;
+  }
+
+  .footer-left {
+    font-size: 44px;
+  }
+
+  .footer-right {
+    font-size: 11.5px;
+    line-height: 1.24;
+  }
 }
