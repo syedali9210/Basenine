@@ -796,6 +796,39 @@ function initCaseStudyNavbar() {
   );
 }
 
+function initFooterScrollTopLink() {
+  const link = document.querySelector("[data-footer-scroll-top]");
+  if (!link) return;
+
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (window.lenis) {
+      window.lenis.scrollTo(0);
+      return;
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+function initFooterServicesScrollLink() {
+  const link = document.querySelector("[data-footer-scroll-services]");
+  const target = document.querySelector("#services");
+  if (!link || !target) return;
+
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (window.lenis) {
+      window.lenis.scrollTo(target);
+      return;
+    }
+
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initCaseStudyNavbar();
   initLenisSmoothScroll();
@@ -809,6 +842,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initFaqAccordion();
   initFooterParallax();
   initFooterWordmarkSlider();
+  initFooterScrollTopLink();
+  initFooterServicesScrollLink();
   initCubeCardAnimation();
   initGlobeAnimation();
   initDesignCardAnimation();
