@@ -255,7 +255,7 @@ a {
   align-items: center;
   background: var(--green);
   border: 0;
-  border-radius: 999px;
+  border-radius: 12.8px;
   color: var(--ink);
   display: inline-flex;
   font-size: 0.8rem;
@@ -586,7 +586,7 @@ h1 span {
   display: block;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 18%;
   width: 100%;
 }
 
