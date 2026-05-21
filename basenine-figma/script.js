@@ -426,78 +426,82 @@ function initStackingCardsParallax() {
   });
 }
 
-function initRotatingImageTrail() {
-  const area = document.querySelector("[data-trail-area]");
-  if (!area || reducedMotion.matches) return;
+function initPixelatedImageReveal() {
+  if (!window.gsap) return;
 
-  const collection = area.querySelector("[data-trail-collection]");
-  if (!collection) return;
+  const animationStepDuration = 0.3;
+  const gridSize = 7;
+  const pixelSize = 100 / gridSize;
+  const cards = document.querySelectorAll("[data-pixelated-image-reveal]");
+  const isTouchDevice =
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    window.matchMedia("(pointer: coarse)").matches;
 
-  const items = collection.querySelectorAll("[data-trail-item]");
-  if (!items.length) return;
+  cards.forEach((card) => {
+    const pixelGrid = card.querySelector("[data-pixelated-image-reveal-grid]");
+    const activeCard = card.querySelector("[data-pixelated-image-reveal-active]");
+    if (!pixelGrid || !activeCard) return;
 
-  let index = 0;
-  let lastCloneX = null;
-  let lastCloneY = null;
-  let cardWidth = items[0].getBoundingClientRect().width;
-  let stepDistance = cardWidth * 0.5;
+    const existingPixels = pixelGrid.querySelectorAll(".pixelated-image-card__pixel");
+    existingPixels.forEach((pixel) => pixel.remove());
 
-  function refreshDistance() {
-    cardWidth = items[0].getBoundingClientRect().width;
-    stepDistance = cardWidth * 0.5;
-  }
+    for (let row = 0; row < gridSize; row += 1) {
+      for (let col = 0; col < gridSize; col += 1) {
+        const pixel = document.createElement("span");
+        pixel.classList.add("pixelated-image-card__pixel");
+        pixel.style.width = `${pixelSize}%`;
+        pixel.style.height = `${pixelSize}%`;
+        pixel.style.left = `${col * pixelSize}%`;
+        pixel.style.top = `${row * pixelSize}%`;
+        pixelGrid.appendChild(pixel);
+      }
+    }
 
-  function spawnTrailItem(x, y) {
-    const original = items[index];
-    const clone = original.cloneNode(true);
+    const pixels = pixelGrid.querySelectorAll(".pixelated-image-card__pixel");
+    const totalPixels = pixels.length;
+    const staggerDuration = animationStepDuration / totalPixels;
+    let isActive = false;
+    let delayedCall;
 
-    clone.style.left = `${x}px`;
-    clone.style.top = `${y}px`;
-    clone.setAttribute("data-trail-item", "hidden");
-    area.appendChild(clone);
+    const animatePixels = (activate) => {
+      isActive = activate;
+      gsap.killTweensOf(pixels);
+      if (delayedCall) delayedCall.kill();
+      gsap.set(pixels, { display: "none" });
 
-    void clone.getBoundingClientRect();
-    clone.setAttribute("data-trail-item", "visible");
+      gsap.to(pixels, {
+        display: "block",
+        duration: 0,
+        stagger: { each: staggerDuration, from: "random" },
+      });
 
-    setTimeout(() => {
-      clone.setAttribute("data-trail-item", "transition-out");
-    }, 400);
+      delayedCall = gsap.delayedCall(animationStepDuration, () => {
+        activeCard.style.display = activate ? "block" : "none";
+        activeCard.style.pointerEvents = activate ? "none" : "";
+      });
 
-    setTimeout(() => {
-      clone.remove();
-    }, 1200);
+      gsap.to(pixels, {
+        display: "none",
+        duration: 0,
+        delay: animationStepDuration,
+        stagger: { each: staggerDuration, from: "random" },
+      });
+    };
 
-    index = (index + 1) % items.length;
-    lastCloneX = x;
-    lastCloneY = y;
-  }
-
-  area.addEventListener("mousemove", (event) => {
-    const rect = area.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-
-    if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
-      lastCloneX = null;
-      lastCloneY = null;
+    if (isTouchDevice) {
+      card.addEventListener("click", () => animatePixels(!isActive));
       return;
     }
 
-    if (lastCloneX === null || lastCloneY === null) {
-      spawnTrailItem(x, y);
-      return;
-    }
+    card.addEventListener("mouseenter", () => {
+      if (!isActive) animatePixels(true);
+    });
 
-    const dx = x - lastCloneX;
-    const dy = y - lastCloneY;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-
-    if (distance >= stepDistance) {
-      spawnTrailItem(x, y);
-    }
+    card.addEventListener("mouseleave", () => {
+      if (isActive) animatePixels(false);
+    });
   });
-
-  window.addEventListener("resize", debounceOnWidthChange(refreshDistance, 250));
 }
 
 function initHighlightText() {
@@ -829,6 +833,37 @@ function initFooterServicesScrollLink() {
   });
 }
 
+function initTrustedLogoHoverCards() {
+  const grid = document.querySelector(".logo-grid");
+  if (!grid) return;
+
+  const sourceCard = grid.querySelector(".logo-item--supermove .logo-hover-card");
+  if (!sourceCard) return;
+
+  grid.querySelectorAll(".logo-item--hover-card").forEach((item) => {
+    if (item.querySelector(".logo-hover-card")) return;
+    item.appendChild(sourceCard.cloneNode(true));
+  });
+}
+
+function initLogoCaseStudyLinks() {
+  document.querySelectorAll(".logo-item[data-case-study-link]").forEach((item) => {
+    const href = item.dataset.caseStudyLink;
+    if (!href) return;
+
+    item.addEventListener("click", (event) => {
+      if (event.target.closest(".logo-hover-card__link")) return;
+      window.location.href = href;
+    });
+
+    item.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      window.location.href = href;
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initCaseStudyNavbar();
   initLenisSmoothScroll();
@@ -836,7 +871,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initClientWorkScrollCards();
   initCursorMarqueeEffect();
   initStackingCardsParallax();
-  initRotatingImageTrail();
+  initPixelatedImageReveal();
   initHighlightText();
   initTestimonialTabs();
   initFaqAccordion();
@@ -844,6 +879,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initFooterWordmarkSlider();
   initFooterScrollTopLink();
   initFooterServicesScrollLink();
+  initTrustedLogoHoverCards();
+  initLogoCaseStudyLinks();
   initCubeCardAnimation();
   initGlobeAnimation();
   initDesignCardAnimation();
